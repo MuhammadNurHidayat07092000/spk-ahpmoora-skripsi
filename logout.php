@@ -7,5 +7,5 @@ unset($_SESSION['nama_lengkap']);
 unset($_SESSION['level']);
 
 session_destroy();
-echo "<script> alert('Anda telah keluar dari halaman Administrator');
-document.location='login.php'</script>"; 
+// alert('Anda telah keluar dari halaman Administrator');
+echo "<script>document.location='index.php'</script>"; 

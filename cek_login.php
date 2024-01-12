@@ -1,7 +1,7 @@
 <?php
 
-require_once 'arsip.php';
-$moora = new moora();
+// require_once 'arsip.php';
+// $moora = new moora();
 
 include "koneksi.php";
 
@@ -29,6 +29,8 @@ if($user_valid) {
             header("location:halamanPerpus.php");
         } elseif($level == "Pembinaan") {
             header("location:halamanPembinaan.php");
+        } elseif($level == "Sekertariat") {
+            header("location:halamanSekertariat.php");
         }
     } else {
         echo "<script>alert('Maat, Login Gagal, Password anda tidak sesuai!');

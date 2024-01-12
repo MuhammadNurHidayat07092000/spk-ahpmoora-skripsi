@@ -50,6 +50,7 @@ $moora = new moora();
                     <th>K3</th>
                     <th>K4</th>
                     <th>K5</th>
+                    <th class="text-center">Aksi</th>
                   </tr>
               </thead>
               <tbody>
@@ -67,6 +68,10 @@ $moora = new moora();
                     <td><?= $a[4] ?></td>
                     <td><?= $a[5] ?></td>
                     <td><?= $a[6] ?></td>
+                    <td class="text-center">
+                      <button type="button" class="btn btn-primary">Ubah</button>
+                      <button type="button" class="btn btn-secondary">Hapus</button>
+                    </td>
                   </tr>
                 <?php } ?>
                 <tr>
@@ -81,6 +86,56 @@ $moora = new moora();
                 </tr>
               </tbody>
             </table>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Tambah Data
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Form Tambah Data Alternatif</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                  <form>
+                    <div class="mb-3">
+                      <label for="kode" class="form-label">Kode</label>
+                      <input type="text" class="form-control" id="kode" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                      <label for="k1" class="form-label">K1</label>
+                      <input type="password" class="form-control" id="k1" placeholder="bobot nilai 1-3">
+                    </div>
+                    <div class="mb-3">
+                      <label for="k2" class="form-label">K2</label>
+                      <input type="password" class="form-control" id="k2" placeholder="bobot nilai 1-4">
+                    </div>
+                    <div class="mb-3">
+                      <label for="k3" class="form-label">K3</label>
+                      <input type="password" class="form-control" id="k3" placeholder="bobot nilai 1-3">
+                    </div>
+                    <div class="mb-3">
+                      <label for="k4" class="form-label">K4</label>
+                      <input type="password" class="form-control" id="k4" placeholder="bobot nilai 1-3">
+                    </div>
+                    <div class="mb-3">
+                      <label for="k5" class="form-label">K5</label>
+                      <input type="password" class="form-control" id="k5" placeholder="bobot nilai 1-3">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
         <div class="card mt-4">

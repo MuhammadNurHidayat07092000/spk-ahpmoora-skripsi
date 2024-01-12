@@ -7,7 +7,7 @@ if(empty($_SESSION['username']) or empty($_SESSION['level'])) {
 }
 
 // include('includes/header.php');
-require_once 'perpustakaan.php';
+require_once 'sekertariat.php';
 $moora = new moora();
 
 ?>
@@ -25,12 +25,12 @@ $moora = new moora();
   </head>
   <body>
     <div class="container mt-3">
-      <div class="jumbotron bg-success text-white">
+      <div class="jumbotron bg-warning text-white">
         <h1 class="display-4">Hello, <b><?= $_SESSION['nama_lengkap'] ?></b></h1>
         <p class="lead">Selamat datang, anda berhasil Login sebagai <b><?= $_SESSION['username'] ?></b></p>
-        <a class="btn btn-warning btn-lg" href="logout.php" role="button">Log Out</a>
+        <a class="btn btn-info btn-lg" href="logout.php" role="button">Log Out</a>
       </div>
-        <h3 class="text-center">PENGELOLAAN DATA BIDANG PERPUSTAKAAN</h3>
+        <h3 class="text-center">PENGELOLAAN DATA SEKERTARIAT</h3>
 
         <hr>
         <!-- <div class="card">
@@ -131,13 +131,17 @@ $moora = new moora();
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Form Tambah Data Alternatif</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Form Tambah Data Sekertariat</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body">
                   <form>
                     <div class="mb-3">
                       <label for="kode" class="form-label">Kode</label>
+                      <input type="text" class="form-control" id="kode" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                      <label for="kode" class="form-label">Nama Lengkap</label>
                       <input type="text" class="form-control" id="kode" aria-describedby="emailHelp">
                     </div>
                     <div class="mb-3">
